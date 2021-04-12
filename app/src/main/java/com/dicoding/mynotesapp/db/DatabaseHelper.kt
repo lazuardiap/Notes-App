@@ -4,7 +4,10 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.dicoding.mynotesapp.db.DatabaseContract.NoteColumns.Companion.TABLE_NAME
-import com.dicoding.mynotesapp.db.DatabaseContract.*
+import com.dicoding.mynotesapp.db.DatabaseContract.NoteColumns.Companion.DATE
+import com.dicoding.mynotesapp.db.DatabaseContract.NoteColumns.Companion.DESCRIPTION
+import com.dicoding.mynotesapp.db.DatabaseContract.NoteColumns.Companion.TITLE
+import com.dicoding.mynotesapp.db.DatabaseContract.NoteColumns.Companion._ID
 
 internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -15,10 +18,10 @@ internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATA
         private const val DATABASE_VERSION = 1
 
         private const val SQL_CREATE_TABLE_NOTE = "CREATE TABLE $TABLE_NAME" +
-                " (${NoteColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
-                " ${NoteColumns.TITLE} TEXT NOT NULL," +
-                " ${NoteColumns.DESCRIPTION} TEXT NOT NULL," +
-                " ${NoteColumns.DATE} TEXT NOT NULL)"
+                " (${_ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
+                " ${TITLE} TEXT NOT NULL," +
+                " ${DESCRIPTION} TEXT NOT NULL," +
+                " ${DATE} TEXT NOT NULL)"
     }
 
     override fun onCreate(db: SQLiteDatabase) {

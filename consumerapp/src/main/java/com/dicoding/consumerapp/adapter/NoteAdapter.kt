@@ -1,4 +1,4 @@
-package com.dicoding.mynotesapp.adapter
+package com.dicoding.consumerapp.adapter
 
 import android.app.Activity
 import android.content.Intent
@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.dicoding.mynotesapp.CustomOnItemClickListener
-import com.dicoding.mynotesapp.NoteAddUpdateActivity
-import com.dicoding.mynotesapp.R
-import com.dicoding.mynotesapp.databinding.ItemNoteBinding
-import com.dicoding.mynotesapp.entity.Note
+import com.dicoding.consumerapp.CustomOnItemClickListener
+import com.dicoding.consumerapp.NoteAddUpdateActivity
+import com.dicoding.consumerapp.R
+import com.dicoding.consumerapp.databinding.ItemNoteBinding
+import com.dicoding.consumerapp.entity.Note
 
 class NoteAdapter(private val activity: Activity) : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     var listNotes = ArrayList<Note>()

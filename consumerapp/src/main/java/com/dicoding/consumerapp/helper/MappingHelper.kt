@@ -1,8 +1,8 @@
-package com.dicoding.mynotesapp.helper
+package com.dicoding.consumerapp.helper
 
 import android.database.Cursor
-import com.dicoding.mynotesapp.db.DatabaseContract
-import com.dicoding.mynotesapp.entity.Note
+import com.dicoding.consumerapp.db.DatabaseContract
+import com.dicoding.consumerapp.entity.Note
 
 object MappingHelper {
 
